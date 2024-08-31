@@ -16,7 +16,6 @@ function App() {
     const randomValue =
       surpriseOptions[Math.floor(Math.random() * surpriseOptions.length)];
     setValue(randomValue);
-    console.log("random: ", randomValue);
   };
 
   //Upload method, to save the image
@@ -33,7 +32,6 @@ function App() {
       };
       const response = await fetch("http://localhost:8000/upload", options);
       const data = response.json();
-      console.log("Data: ", data);
     } catch (err) {
       console.log(err);
       setError("Something didn't work! please try again.");
